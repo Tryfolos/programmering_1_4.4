@@ -1,21 +1,28 @@
 #################### Filip Hedman ####################
 
-antal_rader = int(input("Hur många rader vill du ha?"))
-xposition = 0
+number_of_rows = int(input("How many rows do you want?"))
+position = 1
+startnumber = 1
+multiplier = 1
 
-#running = True
 
 
-#while running == True:
-
-for x in range(1, antal_rader):
-	if antal_rader >= x:
-		while antal_rader > xposition:
-			xposition += 1
-			print(f"{xposition}   ", end = "")
+for x in range(1, number_of_rows + 1):
+	if number_of_rows >= x:
+		while number_of_rows >= position:
+			thing = startnumber * multiplier
+			if thing >= 10:
+				print(f"{thing}   ", end = "")
+			if thing < 10:
+				print(f"{thing}    ", end = "")
+			multiplier += 1
+			position += 1
 		else:
 			print("\n")
-			xposition = 0
+			startnumber += 1
+			multiplier = 1
+			position = 1
+
 
 
 
