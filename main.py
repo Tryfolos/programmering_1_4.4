@@ -1,12 +1,21 @@
 #################### Filip Hedman ####################
 
 antal_rader = int(input("Hur många rader vill du ha?"))
-rader = []
-thing = 1
+xposition = 0
 
-for x in range(1, 100):
+#running = True
+
+
+#while running == True:
+
+for x in range(1, antal_rader):
 	if antal_rader >= x:
-		rader.append(x)
+		while antal_rader > xposition:
+			xposition += 1
+			print(f"{xposition}   ", end = "")
+		else:
+			print("\n")
+			xposition = 0
 
-for x in rader:
-	print(f"{rader}")
+
+
